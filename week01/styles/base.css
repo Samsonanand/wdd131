@@ -111,10 +111,10 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+    width: 100%;  /* Remove max-width and set width to 100% */
     padding: var(--padding);
 }
+
 
 .card {
     background-color: #fff;
