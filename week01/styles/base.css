@@ -11,69 +11,18 @@
     --padding: 1rem;
 }
 
-/* General Flexbox Styling for Centering */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+/* Body and General Styling */
 body {
     font-family: var(--body-font);
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: #333;
-    display: flex;
-    justify-content: center;  /* Centers the content horizontally */
-    align-items: center;      /* Centers the content vertically */
-    min-height: 100vh;        /* Ensures the body takes full viewport height */
-    flex-direction: column;   /* Ensures the content stays in a vertical layout */
 }
 
-/* Centering the Main Content */
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem;  /* Margin around the main content */
-    padding: 1rem;
-    justify-items: center;  /* Centers the grid items horizontally */
-    width: 100%; /* Ensure the main content takes up the full width */
-}
-
-/* Profile and Flag Sections */
-.about-me-section,
-.about-india-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* First column takes up 2/3, second takes up 1/3 */
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Profile Picture and Flag Styling */
-.profile-pic,
-.flag-image {
-    width: 100%; /* Ensures the images fit within the grid */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.flag-image {
-    width: 120px; /* Fixed width for passport size */
-    height: 150px; /* Fixed height for passport size */
-    object-fit: cover; /* Ensures proper cropping without distortion */
-    border-radius: 8px; /* Slight rounding for a clean look */
-    flex-shrink: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-}
-
-/* Flag on the Left */
-.about-india-section {
-    flex-direction: row;
-}
-
-.about-india-section p {
-    flex: 1;
-    text-align: left;
-}
-
+/* Header Styling */
 header {
     background-color: var(--primary-color);
     color: #fff;
@@ -86,24 +35,18 @@ header h1 span {
 }
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
     background-color: #333;
-    padding: 0.5rem;
-    margin: 0 auto; /* Center the navigation within the page */
+    padding: 0.5rem 0;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-around; /* Dynamically adjust spacing */
+    justify-content: center;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
-    width: 100%; /* Ensure it spans the width of the nav */
-    max-width: 1200px; /* Matches the main section width */
-    flex-wrap: wrap; /* Allows wrapping of items if needed */
 }
-
 
 nav ul li a {
     color: #fff;
@@ -112,6 +55,18 @@ nav ul li a {
     transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
 
 .card {
     background-color: #fff;
@@ -119,15 +74,31 @@ nav ul li a {
     border-radius: 8px;
     padding: var(--padding);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 300px;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
+.card h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.about-me-section,
+.about-india-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-me-section img,
+.about-india-section img {
+    max-width: 120px;
     border-radius: 8px;
-    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Styling */
 footer {
     background-color: var(--footer-background);
     color: var(--footer-text);
