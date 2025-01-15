@@ -101,10 +101,6 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-/* nav ul li a:hover {
-    color: var(--secondary-color);
-} */
-
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
