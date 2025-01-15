@@ -12,10 +12,16 @@
 }
 
 /* General Flexbox Styling for Content Alignment */
-.about-me-section,
+.about-me-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* First column 2fr, second column 1fr */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .about-india-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Adjust to have two equal-width columns */
+    grid-template-columns: 1fr 3fr; /* First column 1fr, second column 2fr */
     gap: 1rem;
     margin-bottom: 1.5rem;
 }

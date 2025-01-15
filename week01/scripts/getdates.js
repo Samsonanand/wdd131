@@ -1,4 +1,7 @@
 
+const author = document.querySelector('meta[name="author"]').getAttribute('content');
+console.log(author); // Should print "Samson Kalapatapu"
+
 
 document.querySelectorAll("nav ul li a").forEach(link => {
     link.addEventListener("mouseenter", () => {
