@@ -1,1 +1,5 @@
-document.getElementById("lastModified")?.textContent=document.lastModified;document.getElementById("menu-toggle").addEventListener("click",()=>document.getElementById("navbar").classList.toggle("active"));if(window.innerWidth<600){const e=document.createElement("script");e.src="non-essential-script.js",e.async=!0,document.body.appendChild(e);}
+// Update the "Last Modified" date in the footer
+const lastModifiedElement = document.getElementById("lastModified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = document.lastModified;
+}
