@@ -1,0 +1,154 @@
+/* Root Variables */
+:root {
+    --primary-color: #2a2a72;
+    --secondary-color: #ffcc00;
+    --background-color: #f4f4f9;
+    --header-font: "Montserrat", sans-serif;
+    --body-font: "Roboto", sans-serif;
+    --card-border: #ddd;
+    --footer-background: #2a2a72;
+    --footer-text: #fff;
+    --padding: 1rem;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: var(--padding);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+}
+
+/* Navigation Flex Styles */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Section */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--padding);
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Grid Layout for Figures */
+.temple-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile view */
+    gap: 1.5rem;
+    justify-items: center; /* Center the items */
+}
+
+figure {
+    border: 2px solid var(--card-border);
+    padding: var(--padding);
+    background-color: #fff;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+figcaption {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: var(--padding);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    font-weight: bold;
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temple-container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    figure {
+        width: 100%;
+    }
+}
+

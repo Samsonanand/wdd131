@@ -1,0 +1,30 @@
+/* Larger Screen Design */
+@media (min-width: 601px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    .temple-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+
+    figure {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .temple-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    }
+
+    figure {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
