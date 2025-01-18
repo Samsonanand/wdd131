@@ -1,6 +1,11 @@
 /* Larger Screen Design */
 @media (min-width: 601px) {
-    nav ul {
+    .menu-toggle {
+        display: none; /* Hide menu button on larger screens */
+    }
+
+    nav {
+        display: flex; /* Flex display for larger screens */
         justify-content: center;
     }
 

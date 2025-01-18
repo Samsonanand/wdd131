@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Samson Kalapatapu">
-    <meta name="description" content="WDD 131 - W02 Assignment: Temple Picture Album by Samson Kalapatapu. This is a temple album page, shows new, old, large, small temples around the world.">
+    <meta name="description" content="WDD 131 - W02 Assignment: Temple Picture Album by Samson Kalapatapu. This is a temple album page, shows New, Old, Large and Small temples around the world.">
     <title>WDD 131 - W02 Assignment: Temple Picture Album - Samson Kalapatapu</title>
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
@@ -15,8 +15,9 @@
 <body>
     <header>
         <div class="header-container">
-            <h1>Temples</h1> <!-- "Temples" heading on the left -->
-            <nav>
+            <h1>Temple Album</h1>
+            <button class="menu-toggle" id="menu-toggle">☰</button> <!-- Mobile menu button -->
+            <nav id="navbar">
                 <ul>
                     <li><a href="#" target="_blank">Home</a></li>
                     <li><a href="#" target="_blank">Old</a></li>
@@ -27,11 +28,9 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
-        <h2>Home</h2> <!-- Changed from Old Temples to Home -->
-        
-        <!-- Placeholder temple images and captions -->
+        <h2>Home</h2>
         <div class="temple-container">
             <figure>
                 <img src="images/adelaide_australia_temple.jpg" alt="Temple 1">

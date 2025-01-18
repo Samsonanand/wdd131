@@ -44,6 +44,16 @@ h1 {
     font-size: 2rem;
 }
 
+/* Mobile Navigation Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 /* Navigation Flex Styles */
 nav {
     display: flex;
@@ -71,6 +81,31 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--primary-color);
+}
+
+/* Mobile View - Drop-down menu for mobile */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+    }
+
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    nav.active {
+        display: block; /* Show nav when active */
+    }
 }
 
 /* Main Section */
@@ -130,25 +165,5 @@ footer p {
 
 #lastModified {
     font-weight: bold;
-}
-
-/* Mobile-First Responsive Design */
-@media (max-width: 600px) {
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .temple-container {
-        grid-template-columns: 1fr; /* Single column for mobile */
-    }
-
-    figure {
-        width: 100%;
-    }
 }
 
