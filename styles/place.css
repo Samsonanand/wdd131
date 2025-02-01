@@ -40,15 +40,28 @@ header {
     object-position: center; /* Center the image if cropping happens */
 }
 
-/* DATA & WEATHER BOXES */
+/* DATA & WEATHER BOXES CONTAINER */
+.box-container {
+    position: absolute; /* Keep them on top of the hero image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure boxes are above hero image */
+}
+
+/* Data and Weather Boxes */
 .data-box, .weather-box {
-    position: absolute;
     background: rgba(255, 255, 255, 0.85);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     border: 2px solid #ddd;
+    width: 45%; /* Adjust width */
 }
 
 /* Strip on Top */
@@ -59,19 +72,6 @@ header {
     padding: 10px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-}
-
-/* Positioning for wider screens */
-.data-box {
-    top: 10%;
-    left: 5%;
-    width: 250px;
-}
-
-.weather-box {
-    top: 10%;
-    right: 5%;
-    width: 200px;
 }
 
 /* FOOTER */
@@ -86,7 +86,6 @@ footer {
     width: 100%;
 }
 
-
 /* Updated CSS for Mobile View */
 @media screen and (max-width: 600px) {
     /* Hero Section Adjustments for Mobile */
@@ -98,29 +97,30 @@ footer {
         object-fit: cover; /* Ensure image remains proportional */
     }
 
-    /* Data and Weather Boxes - Mobile Adjustments */
+    /* Move Data and Weather Boxes to Bottom */
+    .box-container {
+        position: relative; /* Remove absolute positioning */
+        display: block; /* Stack the boxes vertically */
+        margin-top: 10px;
+        width: 100%;
+    }
+
     .data-box, .weather-box {
-        position: relative; /* Remove absolute positioning to prevent overlap */
-        margin-top: 20px; /* Add space to prevent overlap with hero image */
         width: 90%; /* Adjust width for mobile */
-        left: 5%; /* Center boxes on mobile */
+        margin: 10px auto; /* Center boxes */
+        position: relative; /* Remove absolute positioning */
     }
 
     .data-box h2, .weather-box h2 {
         background: #2E7D32; /* Green strip */
         color: white;
-        margin: -15px -15px 10px -15px;
+        margin: 0;
         padding: 10px;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
 
-    /* Container adjustments */
-    .container {
-        padding-top: 20px; /* Ensure content starts below the hero image */
-    }
-
-    /* Adjust Card and Content Styles */
+    /* Adjust other elements */
     .card {
         font-size: 16px;
         padding: 8px;
@@ -129,6 +129,10 @@ footer {
     .data, .weather {
         padding: 10px;
         width: 95%; /* Adjust width for mobile */
+    }
+
+    .container {
+        padding-top: 20px; /* Ensure content starts below the hero image */
     }
 
     .header {
@@ -163,4 +167,3 @@ footer {
         max-width: 550px;
     }
 }
-
