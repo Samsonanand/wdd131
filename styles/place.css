@@ -30,14 +30,15 @@ header {
 .hero {
     position: relative;
     width: 100%;
-    height: 68vh; /* Reduced height */
+    height: 68vh; /* Adjust height for larger screens */
     overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensure the image fills the area while maintaining aspect ratio */
+    object-position: center; /* Center the image if cropping happens */
 }
 
 /* DATA & WEATHER BOXES */
@@ -127,10 +128,12 @@ footer {
         width: 100%;
     }
 
-    .hero-image {
-        width: 100%;
-        height: auto;
-        display: block;
+    .hero {
+        height: 50vh; /* Adjust height for mobile view to make the image visible */
+    }
+
+    .hero img {
+        object-fit: cover; /* Ensure image remains proportional */
     }
 
     .content {
