@@ -5,7 +5,6 @@
     --text-color: white;
     --box-bg: rgba(255, 255, 255, 0.9);
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --weather-icon: url('path/to/weather-icon.svg'); /* Add path to weather icon */
 }
 
 /* General Styles */
@@ -18,8 +17,8 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #a41d21;
+    color: white;
     text-align: center;
     padding: 15px 0;
     font-size: 1.8rem;
@@ -30,7 +29,7 @@ header {
 .hero {
     position: relative;
     width: 100%;
-    height: 68vh; /* Adjust height for larger screens */
+    height: 68vh; /* Height for larger screens */
     overflow: hidden;
 }
 
@@ -54,15 +53,15 @@ header {
 
 /* Strip on Top */
 .data-box h2, .weather-box h2 {
-    background: var(--secondary-color); /* Green strip */
-    color: var(--text-color);
+    background: #2E7D32; /* Green strip */
+    color: white;
     margin: -15px -15px 10px -15px; /* Extend beyond padding */
     padding: 10px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
-/* Positioning */
+/* Positioning for wider screens */
 .data-box {
     top: 10%;
     left: 5%;
@@ -75,23 +74,10 @@ header {
     width: 200px;
 }
 
-/* Weather Icon Pseudo-Element */
-.weather-box::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: var(--weather-icon);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
 /* FOOTER */
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #a41d21;
+    color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 1rem;
@@ -100,40 +86,58 @@ footer {
     width: 100%;
 }
 
+
 /* Updated CSS for Mobile View */
 @media screen and (max-width: 600px) {
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f4f4f4;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header {
-        background-color: var(--primary-color);
-        color: var(--text-color);
-        padding: 15px 0;
-        font-size: 24px;
-        font-weight: bold;
-        width: 100%;
-    }
-
+    /* Hero Section Adjustments for Mobile */
     .hero {
-        height: 50vh; /* Adjust height for mobile view to make the image visible */
+        height: 50vh; /* Reduced height for mobile */
     }
 
     .hero img {
         object-fit: cover; /* Ensure image remains proportional */
+    }
+
+    /* Data and Weather Boxes - Mobile Adjustments */
+    .data-box, .weather-box {
+        position: relative; /* Remove absolute positioning to prevent overlap */
+        margin-top: 20px; /* Add space to prevent overlap with hero image */
+        width: 90%; /* Adjust width for mobile */
+        left: 5%; /* Center boxes on mobile */
+    }
+
+    .data-box h2, .weather-box h2 {
+        background: #2E7D32; /* Green strip */
+        color: white;
+        margin: -15px -15px 10px -15px;
+        padding: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding-top: 20px; /* Ensure content starts below the hero image */
+    }
+
+    /* Adjust Card and Content Styles */
+    .card {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .data, .weather {
+        padding: 10px;
+        width: 95%; /* Adjust width for mobile */
+    }
+
+    .header {
+        background-color: #a81919;
+        color: white;
+        padding: 15px 0;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
     }
 
     .content {
@@ -144,16 +148,10 @@ footer {
         width: 100%;
     }
 
-    .card {
-        background-color: var(--secondary-color);
-        color: var(--text-color);
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
+    .hero-image {
         width: 100%;
-        text-align: center;
+        height: auto;
+        display: block;
     }
 
     .data, .weather {
@@ -164,33 +162,5 @@ footer {
         width: 90%;
         max-width: 550px;
     }
-
-    .weather-box::after {
-        content: '';
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-image: var(--weather-icon);
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
 }
 
-/* Large Screen Media Query for More Styling Adjustments */
-@media screen and (min-width: 1024px) {
-    .hero {
-        height: 70vh; /* Adjust height for larger screens */
-    }
-    .data-box {
-        top: 12%;
-        left: 7%;
-        width: 300px;
-    }
-    .weather-box {
-        top: 12%;
-        right: 7%;
-        width: 250px;
-    }
-}
