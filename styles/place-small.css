@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Adjust for mobile */
+    }
+
+    .data-box, .weather-box {
+        width: 90%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .data-box {
+        top: 5%;
+    }
+
+    .weather-box {
+        top: 50%;
+    }
+}

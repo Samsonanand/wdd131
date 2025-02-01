@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samson Kalapatapu">
+    <meta name="description" content="WDD 131 - W03 - Arignar Anna Zoological Park by Samson Kalapatapu. This is one of the biggest Zoo in Tamil Nadu, India">
+    <title>Arignar Anna Zoological Park</title>
+    <link rel="stylesheet" href="styles/place.css"> <!-- Wider View -->
+    <link rel="stylesheet" href="styles/place-small.css"> <!-- Mobile View -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Arignar Anna Zoological Park</h1>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <source srcset="images/chimp.webp" type="image/webp" media="(max-width: 600px)">
+            <source srcset="images/chimp.webp" type="image/webp" media="(min-width: 601px)">
+            <img src="images/chimp.webp" alt="Hero Image of the Zoo">
+            <!-- Data Box -->
+            <div class="data-box">
+                <h2>Data</h2>
+                <p><strong>Location:</strong> Vandalur, Tamil Nadu, India</p>
+                <p><strong>Established:</strong> 1855</p>
+                <p><strong>Area:</strong> 602 hectares (1,488 acres)</p>
+                <p><strong>Number of Species:</strong> 171+</p>
+                <p><strong>Animals:</strong> 2,500+</p>
+                <p><strong>Time Zone:</strong> UTC+5:30 (IST)</p>
+                <p><strong>Managed By:</strong> Tamil Nadu Forest Department</p>
+                <p><strong>Nearest City:</strong> Chennai</p>
+            </div>
+
+            <!-- Weather Box -->
+            <div class="weather-box">
+                <h2>Weather</h2>
+                <p><strong>Temperature:</strong> 30°C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> 8 km/h</p>
+                <p><strong>Humidity:</strong> 60%</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill">29.5°C</span></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Samson Kalapatapu</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/temples.js" defer></script>
+</body>
+</html>
