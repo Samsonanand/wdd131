@@ -29,50 +29,62 @@ header {
 .hero {
     position: relative;
     width: 100%;
-    height: 68vh; /* Height for larger screens */
+    height: 68vh; /* Reduced height */
     overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image fills the area while maintaining aspect ratio */
-    object-position: center; /* Center the image if cropping happens */
+    object-fit: cover;
 }
 
-/* DATA & WEATHER BOXES CONTAINER */
+/* BOX CONTAINER (LEFT & RIGHT SIDES) */
 .box-container {
-    position: absolute; /* Keep them on top of the hero image */
-    top: 0;
+    position: absolute;
+    top: 10%; /* Adjusted position for better alignment */
     left: 0;
-    width: 100%;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-    z-index: 2; /* Ensure boxes are above hero image */
+    padding: 0 5%;
+    z-index: 2;
 }
 
-/* Data and Weather Boxes */
-.data-box, .weather-box {
-    background: rgba(255, 255, 255, 0.85);
+/* Data Box (Left Side) */
+.data-box {
+    background: rgba(255, 255, 255, 0.7); /* Transparent background */
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     backdrop-filter: blur(5px);
     border: 2px solid #ddd;
-    width: 45%; /* Adjust width */
+    width: 25%; /* Reduce the width for better widget appearance */
+    min-width: 220px;
+}
+
+/* Weather Box (Right Side) */
+.weather-box {
+    background: rgba(255, 255, 255, 0.7); /* Transparent background */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    backdrop-filter: blur(5px);
+    border: 2px solid #ddd;
+    width: 20%; /* Reduce the width for better widget appearance */
+    min-width: 220px;
 }
 
 /* Strip on Top */
 .data-box h2, .weather-box h2 {
     background: #2E7D32; /* Green strip */
     color: white;
-    margin: -15px -15px 10px -15px; /* Extend beyond padding */
+    margin: -15px -15px 10px -15px;
     padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
+
 
 /* FOOTER */
 footer {
@@ -86,84 +98,25 @@ footer {
     width: 100%;
 }
 
-/* Updated CSS for Mobile View */
+/* Mobile View Adjustments */
 @media screen and (max-width: 600px) {
-    /* Hero Section Adjustments for Mobile */
-    .hero {
-        height: 50vh; /* Reduced height for mobile */
-    }
-
-    .hero img {
-        object-fit: cover; /* Ensure image remains proportional */
-    }
-
-    /* Move Data and Weather Boxes to Bottom */
+    /* Adjust the layout for mobile view */
     .box-container {
-        position: relative; /* Remove absolute positioning */
-        display: block; /* Stack the boxes vertically */
-        margin-top: 10px;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .data-box, .weather-box {
-        width: 90%; /* Adjust width for mobile */
-        margin: 10px auto; /* Center boxes */
-        position: relative; /* Remove absolute positioning */
+        width: 90%; /* Adjust width to fit better on mobile */
+        margin-bottom: 10px;
     }
 
-    .data-box h2, .weather-box h2 {
-        background: #2E7D32; /* Green strip */
-        color: white;
-        margin: 0;
-        padding: 10px;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    /* Adjust other elements */
-    .card {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .data, .weather {
-        padding: 10px;
-        width: 95%; /* Adjust width for mobile */
-    }
-
-    .container {
-        padding-top: 20px; /* Ensure content starts below the hero image */
-    }
-
-    .header {
-        background-color: #a81919;
-        color: white;
-        padding: 15px 0;
-        font-size: 24px;
-        font-weight: bold;
-        width: 100%;
-    }
-
-    .content {
-        position: relative;
-        z-index: 2;
-        background-color: white;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .hero-image {
+    .hero img {
         width: 100%;
         height: auto;
-        display: block;
-    }
-
-    .data, .weather {
-        background: white;
-        padding: 15px;
-        border-radius: 5px;
-        margin-top: 10px;
-        width: 90%;
-        max-width: 550px;
     }
 }
