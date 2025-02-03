@@ -1,13 +1,12 @@
-/* Global Styles */
+/* General Styles */
 :root {
-    --primary-color: #c8102e; /* Red */
-    --secondary-color: #007a33; /* Green */
+    --primary-color: #c8102e;
+    --secondary-color: #007a33;
     --text-color: white;
     --box-bg: rgba(255, 255, 255, 0.9);
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -16,8 +15,9 @@ body {
     color: #333;
 }
 
+/* HEADER */
 header {
-    background-color: #a41d21;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -25,114 +25,103 @@ header {
     font-weight: bold;
 }
 
-/* HERO SECTION */
+/* HERO IMAGE */
 .hero {
     position: relative;
     width: 100%;
-    height: 68vh; /* Reduced height */
-    overflow: hidden;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .hero img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
-/* BOX CONTAINER (LEFT & RIGHT SIDES) */
-.box-container {
-    position: absolute;
-    top: 10%; /* Start positioning from the top */
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
-    z-index: 2;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Data Box (Left Side) */
-.data-box {
-    background: rgba(255, 255, 255, 0.7); /* Transparent background */
+/* DATA & WEATHER BOXES */
+.data-box, .weather-box {
+    background: var(--box-bg);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: var(--shadow);
     backdrop-filter: blur(5px);
     border: 2px solid #ddd;
-    width: 25%; /* Reduce the width for better widget appearance */
-    min-width: 220px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 15px auto;
 }
 
-/* Weather Box (Right Side) */
-.weather-box {
-    background: rgba(255, 255, 255, 0.7); /* Transparent background */
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    backdrop-filter: blur(5px);
-    border: 2px solid #ddd;
-    width: 25%; /* Reduce the width for better widget appearance */
-    min-width: 220px;
-}
-
-/* Strip on Top */
 .data-box h2, .weather-box h2 {
-    background: #2E7D32; /* Green strip */
+    background: var(--secondary-color);
     color: white;
-    margin: -15px -15px 10px -15px;
     padding: 10px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px 12px 0 0;
 }
 
-
+/* WEATHER ICON */
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
 
 /* FOOTER */
 footer {
-    background-color: #a41d21;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 1rem;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
-/* Mobile View Adjustments */
-@media screen and (max-width: 600px) {
-    /* Adjust the layout for mobile view */
-    .box-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+/* 🖥️ WIDE SCREEN: Place Data & Weather Boxes on the Image */
+@media screen and (min-width: 900px) {
+    .hero {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .data-box, .weather-box {
-        width: 90%; /* Adjust width to fit better on mobile */
-        margin-bottom: 10px;
+        height: 500px;
     }
 
     .hero img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
-        height: auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
-        /* To fix the issue on zooming */
-    body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        height: 100vh;
+    .data-box, .weather-box {
+        width: 320px;
+        position: relative;
         margin: 0;
-        padding: 0;
+    }
+}
+
+/* 📱 MOBILE & SMALL SCREENS: Move Boxes Below Hero Image */
+@media screen and (max-width: 899px) {
+    .overlay-container {
+        position: static;  /* Remove absolute positioning */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
     }
 
-    /* Ensure content doesn't overflow below footer when zoomed */
-    footer {
-        margin-top: 50px; /* Adjust footer positioning */
+    .data-box, .weather-box {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px 0;
     }
 }

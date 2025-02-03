@@ -16,16 +16,15 @@
     <header>
         <h1>Arignar Anna Zoological Park</h1>
     </header>
-    
+
     <main>
         <section class="hero">
             <source srcset="images/chimp.webp" type="image/webp" media="(max-width: 600px)">
             <source srcset="images/chimp.webp" type="image/webp" media="(min-width: 601px)">
             <img src="images/chimp.webp" alt="Hero Image of the Zoo">
-
-            <!-- Data and Weather Boxes Container -->
-            <div class="box-container">
-                <!-- Data Box -->
+    
+            <!-- Overlay Container for Data & Weather -->
+            <div class="overlay-container">
                 <div class="data-box">
                     <h2>Data</h2>
                     <p><strong>Location:</strong> Vandalur, Tamil Nadu, India</p>
@@ -37,10 +36,9 @@
                     <p><strong>Managed By:</strong> Tamil Nadu Forest Department</p>
                     <p><strong>Nearest City:</strong> Chennai</p>
                 </div>
-
-                <!-- Weather Box -->
+    
                 <div class="weather-box">
-                    <h2>Weather</h2>
+                    <h2>Weather <img src="weather-icon.png" class="weather-icon"></h2>
                     <p><strong>Temperature:</strong> 30°C</p>
                     <p><strong>Conditions:</strong> Sunny</p>
                     <p><strong>Wind:</strong> 8 km/h</p>
@@ -50,7 +48,7 @@
             </div>
         </section>
     </main>
-    
+       
     <footer>
         <p>&copy; 2025 Samson Kalapatapu</p>
         <p>Last Modified: <span id="lastModified"></span></p>
