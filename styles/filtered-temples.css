@@ -66,10 +66,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 
-/* Hide the navigation links by default in mobile view */
+/* Hide the navigation links by default on mobile */
 #navbar {
     display: none;
 }
@@ -144,6 +144,10 @@ footer p {
     .temple-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #navbar {
+        display: block;  /* Navbar is shown in larger views */
+    }
 }
 
 @media (min-width: 1024px) {
@@ -176,5 +180,10 @@ footer p {
 
     .menu-toggle {
         display: block; /* Display hamburger icon in mobile view */
+    }
+
+    /* Ensure navbar is hidden by default */
+    #navbar {
+        display: none;
     }
 }
