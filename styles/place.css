@@ -81,6 +81,7 @@ footer {
 }
 
 /* 🖥️ WIDE SCREEN: Place Data & Weather Boxes on the Image */
+
 @media screen and (min-width: 900px) {
     .hero {
         position: relative;
@@ -108,6 +109,15 @@ footer {
         width: 320px;
         position: relative;
         margin: 0;
+    }
+
+    .weather-heading::after {
+        content: url("images/weather-icon.svg"); /* Path to your SVG icon */
+        display: inline-block;
+        width: 20px; /* Adjust size */
+        height: 20px;
+        margin-left: 8px; /* Space between text and icon */
+        vertical-align: middle;
     }
 }
 
