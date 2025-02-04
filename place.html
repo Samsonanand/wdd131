@@ -19,9 +19,11 @@
 
     <main>
         <section class="hero">
-            <source srcset="images/chimp.webp" type="image/webp" media="(max-width: 600px)">
-            <source srcset="images/chimp.webp" type="image/webp" media="(min-width: 601px)">
-            <img src="images/chimp.webp" alt="Hero Image of the Zoo">
+            <picture>
+                <source srcset="images/chimp.webp" type="image/webp" media="(max-width: 600px)">
+                <source srcset="images/chimp.webp" type="image/webp" media="(min-width: 601px)">
+                <img src="images/chimp.webp" alt="Hero Image of the Zoo">
+            </picture>
     
             <!-- Overlay Container for Data & Weather -->
             <div class="overlay-container">
