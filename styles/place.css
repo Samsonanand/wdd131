@@ -29,7 +29,7 @@ header {
 .hero {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 2000px;
     height: auto;
     margin: 0 auto;
 }
@@ -62,11 +62,13 @@ header {
 }
 
 /* WEATHER ICON */
-.weather-icon {
-    width: 40px;
-    height: 40px;
+.weather-box img {
+    width: 40px;   /* Adjust width */
+    height: 40px;  /* Adjust height */
+    display: inline-block;
     vertical-align: middle;
 }
+
 
 /* FOOTER */
 footer {
