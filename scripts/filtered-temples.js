@@ -71,6 +71,12 @@ const temples = [
     }
 ];
 
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("open");
+});
+
+
 const lastModifiedElement = document.getElementById("lastModified");
 if (lastModifiedElement) {
     lastModifiedElement.textContent = document.lastModified;

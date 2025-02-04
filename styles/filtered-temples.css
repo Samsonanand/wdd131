@@ -69,6 +69,26 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+/* Hide the navigation links by default in mobile view */
+#navbar {
+    display: none;
+}
+
+/* Show the navigation when the hamburger menu is clicked */
+#navbar.open {
+    display: block;
+}
+
+/* Styling the hamburger icon */
+.menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 #gallery-heading {
     text-align: center;
     font-size: 2rem;
@@ -129,5 +149,32 @@ footer p {
 @media (min-width: 1024px) {
     .temple-container {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    nav ul {
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust position of the dropdown */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 1rem;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Display hamburger icon in mobile view */
     }
 }
