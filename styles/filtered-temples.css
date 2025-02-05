@@ -106,12 +106,19 @@ nav ul li a:hover {
     padding: var(--padding);
 }
 
-.temple-card { min-height: 300px; } 
+.temple-card {
+    min-height: 300px;
+    padding: var(--padding);
+    text-align: center;
+}
 
 .temple-card img {
-    width: 100%; 
+    width: 100%;
     height: auto;
-  }  
+    margin-bottom: 1rem;
+    max-width: 300px;
+    max-height: 250px;
+}
 
 footer {
     background-color: var(--footer-background);
