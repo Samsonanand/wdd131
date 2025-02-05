@@ -7,30 +7,30 @@
     <meta name="description" content="WDD 131 - W04 Assignment: Picture Album Enhancement by Samson Kalapatapu. This is a enhanced temple album page, shows New, Old, Large and Small temples around the world.">
     <title>WDD 131 - W04 Assignment: Picture Album Enhancement - Samson Kalapatapu</title>
     <link rel="stylesheet" href="styles/filtered-temples.css" media="all">
-    <!-- <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 600px)"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Preload critical CSS for faster load times -->
+    <link rel="preload" href="styles/filtered-temples.css" as="style">
 </head>
 <body>
     <header>
-        <header>
-            <div class="header-container">
-                <h1>Temple Album</h1>
-                <button class="menu-toggle" id="menu-toggle">☰</button> <!-- Mobile menu button -->
-                <nav id="navbar">
-                    <ul>
-                        <li><a href="#" id="home">Home</a></li>
-                        <li><a href="#" id="old">Old</a></li>
-                        <li><a href="#" id="new">New</a></li>
-                        <li><a href="#" id="large">Large</a></li>
-                        <li><a href="#" id="small">Small</a></li>
-                    </ul>
-                </nav>
-            </div>  
-        </header>
-        
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#" id="home">Home</a></li>
+                    <li><a href="#" id="old">Old</a></li>
+                    <li><a href="#" id="new">New</a></li>
+                    <li><a href="#" id="large">Large</a></li>
+                    <li><a href="#" id="small">Small</a></li>
+                </ul>
+            </nav>
+        </div>  
     </header>
+
     <main>
         <h2 id="gallery-heading">Temple Gallery</h2>
         <div class="temple-container" id="temple-container"></div>

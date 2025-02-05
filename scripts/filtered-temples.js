@@ -1,3 +1,4 @@
+// Temple Data
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -53,35 +54,31 @@ const temples = [
         location: "Bountiful, Utah, United States",
         dedicated: "1995, January, 14",
         area: 104000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-766347-wallpaper.jpg    "
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-766347-wallpaper.jpg"
     },
     {
         templeName: "Melbourne Australia Temple",
         location: "Melbourne, Australia",
         dedicated: "2000, June, 16",
-        area: 10700,
+        area: 10700 ,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/melbourne-australia/400x250/melbourne-australia-temple-lds-1025169-wallpaper.jpg"
     },
     {
-        templeName: "Albuquerque New Mexico",
+        templeName: "Albuquerque New Mexico Temple",
         location: "Albuquerque, Mexico",
-        dedicated: "2000, March, 5",
+        dedicated: "2000, March ,5",
         area: 34245,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-998219-wallpaper.jpg"
-    }
+    }   
 ];
 
-document.getElementById("menu-toggle").addEventListener("click", function() {
-    const navbar = document.getElementById("navbar");
-    navbar.classList.toggle("open");
-});
-
-
+// Update Last Modified Date
 const lastModifiedElement = document.getElementById("lastModified");
 if (lastModifiedElement) {
     lastModifiedElement.textContent = document.lastModified;
 }
 
+// Create Temple Cards
 const templeContainer = document.getElementById("temple-container");
 
 function createTempleCard(temple) {
@@ -104,10 +101,27 @@ function displayTemples(filteredTemples) {
     filteredTemples.forEach(createTempleCard);
 }
 
+// Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('#navbar');
+
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+});
+  
+
+// Lazy loading for images
+const images = document.querySelectorAll('img');
+images.forEach(image => {
+  image.setAttribute('loading', 'lazy');
+});
+
+// Handle Filter Buttons
 document.getElementById("home").addEventListener("click", () => displayTemples(temples));
 document.getElementById("old").addEventListener("click", () => displayTemples(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900)));
 document.getElementById("new").addEventListener("click", () => displayTemples(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000)));
 document.getElementById("large").addEventListener("click", () => displayTemples(temples.filter(temple => temple.area > 90000)));
 document.getElementById("small").addEventListener("click", () => displayTemples(temples.filter(temple => temple.area < 10000)));
 
-displayTemples(temples);  // Display all temples on page load
+// Initial Display
+displayTemples(temples);
