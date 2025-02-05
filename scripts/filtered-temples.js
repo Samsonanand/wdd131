@@ -12,14 +12,14 @@ const temples = [
         location: "Manti, Utah, United States",
         dedicated: "1888, May, 21",
         area: 74792,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-766504-wallpaper.jpg    "
     },
     {
         templeName: "Payson Utah",
         location: "Payson, Utah, United States",
         dedicated: "2015, June, 7",
         area: 96630,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-daylight-1416668-wallpaper.jpg"
     },
     {
         templeName: "Yigo Guam",
@@ -70,7 +70,7 @@ const temples = [
         area: 34245,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-998219-wallpaper.jpg"
     }   
-];
+];  
 
 // Update Last Modified Date
 const lastModifiedElement = document.getElementById("lastModified");
