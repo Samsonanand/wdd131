@@ -114,10 +114,9 @@ nav ul li a:hover {
 
 .temple-card img {
     width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+    height: 200px;
     max-width: 300px;
-    max-height: 250px;
+    object-fit: cover;
 }
 
 footer {
