@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samson Kalapatapu">
+    <meta name="description" content="Site plan for the Vandaloor Zoo website project.">
+    <title>Site Plan - Vandaloor Zoo</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Site Plan - Vandaloor Zoo</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Vandaloor Zoo</strong></p>
+            <p>The name represents one of India's largest zoological parks, dedicated to wildlife conservation and education.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>This website will serve as an information hub for visitors, providing details on exhibits, ticket pricing, weather conditions, conservation efforts, and upcoming events.</p>
+        </section>
+
+        <section>
+            <h2>Target Audience</h2>
+            <p>The site is intended for families, students, wildlife enthusiasts, and tourists who want to learn about the zoo before visiting.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>What are the zoo's opening hours and ticket prices?</li>
+                <li>How can I participate in the zoo's conservation programs?</li>
+                <li>Which animal exhibits are available?</li>
+                <li>Does the zoo have any special events or guided tours?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pages & Content</h2>
+            <ul>
+                <li><strong>Home Page:</strong> Introduction, hero image, quick facts, and weather information.</li>
+                <li><strong>Exhibits Page:</strong> List of animal species, habitats, and conservation programs.</li>
+                <li><strong>Visitor Info Page:</strong> Ticket prices, opening hours, contact form, FAQs, and weather updates.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Navigation Structure</h2>
+            <p>A common header and footer with links to:</p>
+            <ul>
+                <li>Home</li>
+                <li>Exhibits</li>
+                <li>Visitor Info</li>
+                <li>Contact</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p><strong>Primary Color:</strong> Green (#4CAF50) – Used for headings and navigation.</p>
+            <p><strong>Secondary Color:</strong> Beige (#F5F5DC) – Used for background and content areas.</p>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p><strong>Heading Font:</strong> Montserrat, sans-serif</p>
+            <p><strong>Body Font:</strong> Roboto, sans-serif</p>
+        </section>
+
+        <section>
+            <h2>Dynamic JavaScript Features</h2>
+            <ul>
+                <li>DOM Interaction – Update exhibit descriptions dynamically.</li>
+                <li>Event Listeners – Handle user interactions like button clicks.</li>
+                <li>Conditional Branching – Display alerts based on visitor preferences.</li>
+                <li>Objects & Arrays – Store and retrieve animal details dynamically.</li>
+                <li>Template Literals – Use dynamic strings for rendering content.</li>
+                <li>LocalStorage – Save user preferences or last visited exhibit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>HTML Form</h2>
+            <p>The contact form will include:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email</li>
+                <li>Message</li>
+                <li>Submit button</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframe</h2>
+            <p>Below is a basic wireframe representation of the home page:</p>
+            <img src="images/mobile-view-wireframe.png" alt="Mobile Wireframe">
+            <img src="images/large-view-wireframe.png" alt="Desktop Wireframe">
+        </section>
+
+        <section>
+            <h2>Performance & Accessibility Testing</h2>
+            <ul>
+                <li>Validated HTML & CSS using W3C Validator.</li>
+                <li>Checked accessibility, SEO, and performance with Lighthouse.</li>
+                <li>Will ensure optimized images and lazy loading.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Samson Kalapatapu</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
