@@ -76,18 +76,19 @@ input, select, textarea {
 .features {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align checkboxes to the left */
-    margin-left: auto; /* Push content to the right */
+    gap: 8px; /* Adjust spacing */
 }
+
 .features label {
-    display: inline-block;
-    margin-right: 15px; /* Add spacing between labels */
-    cursor: pointer;
+    display: flex;
+    align-items: center; /* ✅ Ensures checkbox and text align properly */
+    gap: 5px; /* ✅ Creates spacing between checkbox and label */
 }
+
 .features input[type="checkbox"] {
-    margin-right: 5px; /* Adds space between checkbox and label text */
-    vertical-align: left;
+    margin: 0; /* Ensures no unexpected spacing */
 }
+
 
 /* Button */
 input[type="submit"] {
