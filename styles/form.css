@@ -39,6 +39,14 @@ form {
     max-width: 500px;
 }
 
+/* Align all labels to the right */
+form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 /* Labels */
 label {
     display: block;
@@ -63,6 +71,14 @@ input, select, textarea {
 }
 
 /* Features */
+
+/* Keep checkboxes stacked vertically */a
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align checkboxes to the left */
+    margin-left: auto; /* Push content to the right */
+}
 .features label {
     display: inline-block;
     margin-right: 15px; /* Add spacing between labels */
@@ -70,7 +86,7 @@ input, select, textarea {
 }
 .features input[type="checkbox"] {
     margin-right: 5px; /* Adds space between checkbox and label text */
-    vertical-align: middle;
+    vertical-align: left;
 }
 
 /* Button */
@@ -91,4 +107,31 @@ footer {
     color: var(--footer-text);
     padding: 10px;
     margin-top: 20px;
+}
+
+
+
+
+/* Adjust form layout for mobile */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%; /* Make form take full width */
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column; /* Stack labels & inputs */
+        align-items: flex-end; /* Align labels to the right */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%; /* Full width inputs */
+    }
+
+    /* Ensure checkboxes stay stacked on mobile */
+    .features {
+        align-items: flex-start;
+    }
 }
