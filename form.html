@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Samson Kalapatapu, width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="W05 Assignment: Product Review Form - It captures, product name, rating, features, etc.">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+            </select>
+
+            <!-- Overall Rating -->
+            <label>Overall Rating</label>
+            <div class="rating">
+                <input type="radio" id="star1" name="rating" value="1" required><label for="star1">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★★★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★★★★</label>
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★★★★★</label>
+            </div>
+
+            <!-- Date of Installation -->
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
+
+            <!-- Features Used -->
+            <label>Which features did you find useful? <em>(Check all that apply)</em></label>
+            <div class="features">
+                <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+                <label><input type="checkbox" name="features" value="Design"> Design</label>
+            </div>
+
+            <!-- Written Review -->
+            <label for="review">Written Review <span>(Optional)</span></label>
+            <textarea id="review" name="review"></textarea>
+
+            <!-- User Name -->
+            <label for="username">Your Name <span>(Optional)</span></label>
+            <input type="text" id="username" name="username">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>©2024 🏈 Samson Kalapatapu 🏈 Chennai </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/form.js" defer></script>
+</body>
+</html>
+
+
