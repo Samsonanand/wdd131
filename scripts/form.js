@@ -1,22 +1,17 @@
-// Product List
-const products = [
-    { id: "p1", name: "Smartphone" },
-    { id: "p2", name: "Laptop" },
-    { id: "p3", name: "Headphones" },
-    { id: "p4", name: "Smartwatch" }
-];
-
-// Populate Select Dropdown
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product");
+    const lastModified = document.getElementById("last-modified");
 
-    products.forEach(product => {
-        let option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
-    });
+    if (productSelect) {
+        productSelect.innerHTML += `
+            <option value="p1">Smartphone</option>
+            <option value="p2">Laptop</option>
+            <option value="p3">Headphones</option>
+            <option value="p4">Smartwatch</option>
+        `;
+    }
 
-    // Display Last Modified Date
-    document.getElementById("last-modified").textContent = new Date(document.lastModified).toLocaleString();
+    if (lastModified) {
+        lastModified.textContent = new Date(document.lastModified).toLocaleString();
+    }
 });
