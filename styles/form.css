@@ -11,6 +11,17 @@
     --padding: 1rem;
 }
 
+h1 {
+    font-size: 2rem; /* Avoid extreme font sizes */
+    visibility: visible;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    font-display: swap; /* Ensures text loads immediately with fallback font */
+    src: url('your-font.woff2') format('woff2');
+}
+
 /* General Styles */
 body {
     font-family: var(--body-font);
