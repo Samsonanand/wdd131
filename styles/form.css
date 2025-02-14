@@ -72,21 +72,21 @@ input, select, textarea {
 
 /* Features */
 
-/* Keep checkboxes stacked vertically */a
 .features {
     display: flex;
-    flex-direction: column;
-    gap: 8px; /* Adjust spacing */
+    flex-direction: column; /* Stack checkboxes vertically */
+    align-items: flex-start; /* Align checkboxes and labels to the left */
 }
 
 .features label {
     display: flex;
-    align-items: center; /* ✅ Ensures checkbox and text align properly */
-    gap: 5px; /* ✅ Creates spacing between checkbox and label */
+    align-items: center; /* Align checkbox and text properly */
+    gap: 8px; /* Space between checkbox and text */
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
 }
 
 .features input[type="checkbox"] {
-    margin: 0; /* Ensures no unexpected spacing */
+    margin: 0; /* Remove extra spacing */
 }
 
 
