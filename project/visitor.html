@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samson Kalapatapu">
+    <meta name="description" content="Book tickets for Vandaloor Zoo shows.">
+    <title>Vandaloor Zoo | Visitor Info</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/zoo_logo_transparent.png" alt="Zoo Logo">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="visitor.html">Visitor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="visitor-container">
+        <!-- Left: Ticket & Show Selection -->
+        <section class="ticket-selection">
+            <h2>Book Your Tickets</h2>
+
+            <!-- Visitors Selection -->
+            <label for="adults">Adults (₹200 each)</label>
+            <input type="number" id="adults" min="0" value="0">
+
+            <label for="children">Children (₹100 each)</label>
+            <input type="number" id="children" min="0" value="0">
+
+            <label for="students">Students (₹150 each)</label>
+            <input type="number" id="students" min="0" value="0">
+
+            <label for="international">International Visitors (₹500 each)</label>
+            <input type="number" id="international" min="0" value="0">
+
+            <!-- Additional Shows -->
+            <h3>Additional Shows</h3>
+            <div class="shows">
+                <label><input type="checkbox" class="show" value="300"> Elephant Safari (₹300)</label>
+                <label><input type="checkbox" class="show" value="250"> Penguin Feeding (₹250)</label>
+                <label><input type="checkbox" class="show" value="200"> Peacock Show (₹200)</label>
+                <label><input type="checkbox" class="show" value="350"> Reptile House with Annie & Bob (₹350)</label>
+                <label><input type="checkbox" class="show" value="400"> Shark Feeding (₹400)</label>
+            </div>
+        </section>
+
+        <!-- Right: Billing & Payment -->
+        <section class="billing-section">
+            <h2>Billing & Payment</h2>
+
+            <!-- Total Calculation -->
+            <p><strong>Subtotal:</strong> ₹<span id="subtotal">0</span></p>
+            <p><strong>CGST (9%):</strong> ₹<span id="cgst">0</span></p>
+            <p><strong>SGST (9%):</strong> ₹<span id="sgst">0</span></p>
+            <p><strong>Total:</strong> ₹<span id="total">0</span></p>
+
+            <!-- Payment Method -->
+            <label for="payment">Select Payment Method:</label>
+            <select id="payment">
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+            </select>
+
+            <!-- Confirm Booking -->
+            <button id="confirmBooking">Confirm Booking</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2024 🏈 Samson Kalapatapu 🏈 Chennai </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/zoo.js" defer></script>
+</body>
+</html>

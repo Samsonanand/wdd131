@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samson Kalapatapu">
+    <meta name="description" content="WDD 131 - Project - Vandaloor Zoo, one of the biggest Zoos in Tamil Nadu, India">
+    <title>Vandaloor Zoo | Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/zoo_logo_transparent.png" alt="Zoo Logo">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>    
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="visitor.html">Visitor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>  
+    </header>
+
+    <main>
+        <h1>Welcome to Vandaloor Zoo</h1>
+
+        <section class="hero">
+            <picture>
+                <source srcset="images/chimp.webp" type="image/webp" media="(max-width: 600px)">
+                <source srcset="images/chimp.webp" type="image/webp" media="(min-width: 601px)">
+                <img src="images/chimp.webp" alt="Hero Image of the Zoo">
+            </picture>
+    
+            <!-- Overlay Container for Data & Weather -->
+            <div class="overlay-container">
+                <div class="data-box">
+                    <h2>Data</h2>
+                    <p><strong>Location:</strong> Vandalur, Tamil Nadu, India</p>
+                    <p><strong>Established:</strong> 1855</p>
+                    <p><strong>Area:</strong> 602 hectares (1,488 acres)</p>
+                    <p><strong>Number of Species:</strong> 171+</p>
+                    <p><strong>Animals:</strong> 2,500+</p>
+                    <p><strong>Time Zone:</strong> UTC+5:30 (IST)</p>
+                    <p><strong>Managed By:</strong> Tamil Nadu Forest Department</p>
+                    <p><strong>Nearest City:</strong> Chennai</p>
+                </div>
+    
+                <div class="weather-box">
+                    <h2>Weather <img src="images/weather-icon.svg" alt="Weather Icon"></h2>
+                    <p><strong>Temperature:</strong> 30°C</p>
+                    <p><strong>Conditions:</strong> Sunny</p>
+                    <p><strong>Wind:</strong> 8 km/h</p>
+                    <p><strong>Humidity:</strong> 60%</p>
+                    <p><strong>Wind Chill:</strong> <span id="windChill">29.5°C</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>About Vandaloor Zoo</h2>
+            <p>Vandaloor Zoo, officially known as Arignar Anna Zoological Park, is one of India's largest and most diverse wildlife parks. Established in 1855, the zoo houses over 2,500 animals across 171+ species, providing an enriching experience for visitors of all ages.</p>
+            <p>Explore the vast landscapes, observe majestic wildlife, and engage in conservation efforts while enjoying a memorable adventure!</p>
+            
+            <!-- CTA Button -->
+            <a href="visitor.html" class="cta-button">🎟️ Book Tickets Now</a>
+        </section>
+
+        <section class="activities">
+            <h2>Exciting Experiences at Vandaloor Zoo</h2>
+            <div class="cards-container">
+
+                <div class="card">
+                    <img src="images/peacock.webp" alt="Peacock Show">
+                    <h3>Peacock Show</h3>
+                    <p>Watch the stunning peacocks display their vibrant feathers.</p>
+                </div>
+        
+                <div class="card">
+                    <img src="images/elphant-safari.webp" alt="Elephant Safari">
+                    <h3>Elephant Safari</h3>
+                    <p>Take a majestic ride on these gentle giants through the zoo trails.</p>
+                </div>
+        
+                <div class="card">
+                    <img src="images/aqua.webp" alt="Underwater Aquarium">
+                    <h3>Underwater Aquarium</h3>
+                    <p>Explore marine life up close in our state-of-the-art aquarium.</p>
+                </div>
+        
+                <div class="card">
+                    <img src="images/penguin.webp" alt="Feeding Penguins">
+                    <h3>Feeding Penguins</h3>
+                    <p>Get a chance to feed the adorable penguins at scheduled times.</p>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <p>©2024 🏈 Samson Kalapatapu 🏈 Chennai </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/zoo.js" defer></script>
+</body>
+</html>

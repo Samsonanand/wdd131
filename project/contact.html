@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samson Kalapatapu">
+    <meta name="description" content="Get in touch with Vandaloor Zoo.">
+    <title>Vandaloor Zoo | Contact</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/zoo_logo_transparent.png" alt="Zoo Logo">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="visitor.html">Visitor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+           
+        <h1>Contact Us</h1>
+
+        <section class="contact-info">
+            <h2>Special Zoo Tour Facilities</h2>
+            <p>We offer exclusive tour facilities to explore the zoo comfortably.</p>
+            <ul>
+                <li><strong>Buggy Ride:</strong> ₹200 per person</li>
+                <li><strong>Bus Tour:</strong> ₹300 per person</li>
+                <li><strong>Private Guide:</strong> ₹500 per group</li>
+            </ul>
+            <p>For bookings, call: <strong>+91 98765 43210</strong> or email us at <a href="mailto:info@vandaloorzoo.com">info@vandaloorzoo.com</a></p>
+        </section>
+
+        <section class="feedback-form">
+            <h2>Share Your Experience</h2>
+            <form action="submit_feedback.html" method="post">
+                <!-- Name -->
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <!-- Email -->
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <!-- Overall Rating -->
+                <label>Rate Your Experience</label>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★★★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★★★★</label>
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★★★★★</label>
+                </div>
+
+                <!-- Feedback -->
+                <label for="feedback">Your Feedback</label>
+                <textarea id="feedback" name="feedback" rows="5" placeholder="Tell us about your experience..."></textarea>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+    </main>
+        
+    <footer>
+        <p>©2024 🏈 Samson Kalapatapu 🏈 Chennai </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+        
+    <script src="scripts/zoo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+/* 🎨 Color Scheme */
+:root {
+    --primary-color: #4CAF50; /* Green for Headings & Navigation */
+    --secondary-color: #F5F5DC; /* Beige for Background & Content */
+    --text-color: #333;
+    --box-bg: rgba(255, 255, 255, 0.9);
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌍 Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: var(--primary-color);
+}  
+
+
+/* HEADER */
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    margin-left: auto; /* Push navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* 🖼️ HERO IMAGE */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 2200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 🔹 DATA & WEATHER BOXES */
+.overlay-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.data-box, .weather-box {
+    background: var(--box-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(5px);
+    border: 2px solid #ddd;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.data-box h2, .weather-box h2 {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+}
+
+/* 🌤️ WEATHER ICON */
+.weather-box img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 📄 INTRO SECTION */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #388E3C; /* Slightly darker green */
+}
+
+/* Activities Section */
+.activities {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--secondary-color);
+}
+
+.activities h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Card Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Images */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card Titles */
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Card Descriptions */
+.card p {
+    padding: 0 15px 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Exhibits Section */
+.exhibits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.exhibit-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.exhibit-card:hover {
+    transform: scale(1.05);
+}
+
+.exhibit-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.exhibit-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.exhibit-card p {
+    padding: 0 15px 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Zoo Info Section */
+.zoo-info {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    margin: 20px 0;
+}
+
+.zoo-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.zoo-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #388E3C;
+}
+
+/* Visitor Page Layout */
+.visitor-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ticket Selection & Billing Sections */
+.ticket-selection, .billing-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+.ticket-selection h2, .billing-section h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Inputs & Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Shows Selection */
+.shows label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Billing Section */
+.billing-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Confirm Button */
+#confirmBooking {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#confirmBooking:hover {
+    background: #388E3C;
+}
+
+/* Right Container (Form) */
+.right-container {
+    width: 45%;
+    padding: 20px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container label,
+.right-container select,
+.right-container input {
+    margin-bottom: 10px;
+}
+
+.right-container button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.right-container button:hover {
+    background: #388e3c;
+}
+
+/* Contact Page Styles */
+.contact-info, .feedback-form {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Info */
+.contact-info h2, .feedback-form h2 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    padding: 5px;
+    font-size: 1.1rem;
+}
+
+/* Feedback Form */
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-form label {
+    font-weight: bold;
+}
+
+.feedback-form input, .feedback-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.feedback-form textarea {
+    resize: none;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.feedback-form input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.feedback-form input[type="submit"]:hover {
+    background: #388E3C;
+}
+
+
+/* 🦶 FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* 🖥️ WIDE SCREEN: Place Data & Weather Boxes on the Image */
+
+@media screen and (min-width: 900px) {
+    nav {
+        display: flex;
+    }
+
+    .hero {
+        position: relative;
+        height: 500px;
+    }
+
+    .hero img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .data-box, .weather-box {
+        width: 320px;
+        position: relative;
+        margin: 0;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 899px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger */
+    }
+
+    nav.active {
+        display: block;
+    }
+}
